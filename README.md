@@ -42,19 +42,19 @@ Generates one or more passwords from random quotes.
 ### Installation
 
 ```bash
-npm install
+bun install
 ```
 
 ### Development
 
 ```bash
-npm run dev
+bun dev
 ```
 
 ### Deployment
 
 ```bash
-npm run deploy
+bun deploy
 ```
 
 ### Type Generation
@@ -62,7 +62,7 @@ npm run deploy
 To generate or synchronize types based on your Worker configuration, run:
 
 ```bash
-npm run cf-typegen
+bun cf-typegen
 ```
 
 When instantiating `Hono`, pass the `CloudflareBindings` as a generic:
