@@ -7,7 +7,7 @@
   "routes": [
     {
       "pattern": "pw.bkend.app/*",
-      "zone_name": "pw.bkend.app"
+      "zone_name": "bkend.app"
     }
   ],
   "observability": {
