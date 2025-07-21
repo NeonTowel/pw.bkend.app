@@ -4,10 +4,17 @@
   "main": "src/index.ts",
   "compatibility_date": "2025-07-21",
   "workers_dev": false,
+  "custom_domains": [
+    "pw.bkend.app"
+  ],
   "routes": [
     {
       "pattern": "pw.bkend.app/*",
       "zone_name": "bkend.app"
+    },
+    {
+      "pattern": "pw.bkend.app",
+      "custom_domain": true
     }
   ],
   "observability": {
