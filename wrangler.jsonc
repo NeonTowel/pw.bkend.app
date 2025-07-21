@@ -4,9 +4,7 @@
   "main": "src/index.ts",
   "compatibility_date": "2025-07-21",
   "workers_dev": false,
-  "custom_domains": [
-    "pw.bkend.app"
-  ],
+  "preview_urls": false,
   "routes": [
     {
       "pattern": "pw.bkend.app/*",
