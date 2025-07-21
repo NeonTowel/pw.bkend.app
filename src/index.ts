@@ -1,4 +1,5 @@
 import { Hono } from 'hono'
+import { cors } from 'hono/cors'
 import { secureHeaders } from 'hono/secure-headers'
 import { QuoteEngine } from './quotes/engine'
 import { GameOfThronesQuoteProvider, RonSwansonQuoteProvider, DadJokeQuoteProvider, StarWarsQuoteProvider, LotrQuoteProvider } from './quotes/providers'
@@ -24,6 +25,13 @@ const app = new Hono<AppType>().use(
 );
 
 app.use(secureHeaders())
+app.use(cors({
+  origin: ['https://pw.neontowel.dev', 'http://localhost:5173', 'http://127.0.0.1:5173'],
+  allowHeaders: ['Content-Type'],
+  allowMethods: ['GET', 'OPTIONS'],
+  credentials: false,
+  maxAge: 3600
+}))
 
 app.get('/', (c) => {
   return c.text('hello.')
