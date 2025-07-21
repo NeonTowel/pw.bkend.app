@@ -3,6 +3,16 @@
   "name": "pw-bkend-app",
   "main": "src/index.ts",
   "compatibility_date": "2025-07-21",
+  "workers_dev": false,
+  "routes": [
+    {
+      "pattern": "pw.bkend.app/*",
+      "zone_name": "pw.bkend.app"
+    }
+  ],
+  "observability": {
+    "enabled": false,
+  },
   "unsafe": {
     "bindings": [
       {
